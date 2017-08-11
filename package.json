@@ -7,8 +7,13 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@types/uuid": "^3.4.0",
+		"mobx": "^3.2.2",
+		"mobx-react": "^4.2.2",
 		"react": "16.0.0-alpha.12",
-		"react-native": "0.47.1"
+		"react-native": "0.47.1",
+		"react-native-swipeout": "adrianhall/react-native-swipeout#types",
+		"uuid": "^3.1.0"
 	},
 	"devDependencies": {
 		"@types/react": "^16.0.2",

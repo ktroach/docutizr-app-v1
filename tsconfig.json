@@ -4,6 +4,8 @@
         "module": "es2015",
         "jsx": "react-native",
         "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": true
     }
 }

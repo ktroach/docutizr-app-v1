@@ -1,6 +1,6 @@
 {
-	"name": "masterdetailtemplate",
-	"version": "0.0.1",
+	"name": "docutizr-app",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"start": "react-native start --transformer node_modules/react-native-typescript-transformer/index.js --sourceExts ts,tsx",

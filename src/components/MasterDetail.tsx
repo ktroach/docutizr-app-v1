@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import DeviceInfo from 'react-native-device-info';
-import Icon from 'react-native-vector-icons/Ionicons'
+// import Icon from 'react-native-vector-icons/Ionicons'
 
 import { observer, inject } from 'mobx-react/native';
 
@@ -308,7 +308,7 @@ export default class MasterDetail extends React.Component<MasterDetailProperties
                     <View style={styles.onePaneHeader}>
                         <View style={styles.onePaneHeaderLeftIconContainer}>
                             <TouchableHighlight onPress={() => this.onClearSelection()}>
-                                <Icon style={styles.onePaneHeaderBackButton} name="ios-arrow-back"/>
+                                <Text>Back</Text>
                             </TouchableHighlight>
                         </View>
                         <View style={styles.onePaneHeaderTitleContainer}>

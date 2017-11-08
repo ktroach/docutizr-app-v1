@@ -5,7 +5,7 @@ import noteStore from './stores/noteStore';
 import MasterDetail from './components/MasterDetail';
 
 /**
- * Production Application Component - this component renders the rest of the
+ * docutizr Application Component - this component renders the rest of the
  * application for us.
  *
  * @export

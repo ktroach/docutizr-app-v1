@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { Provider } from 'mobx-react/native';
 import noteStore from './stores/noteStore';
-import NoteListPage from './components/NoteListPage';
+import MasterDetail from './components/MasterDetail';
 
 /**
  * Production Application Component - this component renders the rest of the
@@ -22,7 +22,7 @@ export default class App extends React.Component<undefined, undefined> {
   render() {
     return (
       <Provider noteStore={noteStore}>
-        <NoteListPage/>
+        <MasterDetail/>
       </Provider>
     );
   }

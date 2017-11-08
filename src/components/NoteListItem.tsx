@@ -15,6 +15,8 @@ import Note from '../models/Note';
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
+        borderBottomWidth: 1,
+        borderBottomColor: '#C0C0C0',
         flex: 1,
         flexDirection: 'column',
         height: 40,

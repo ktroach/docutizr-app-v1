@@ -131,7 +131,8 @@ export default class NoteList extends React.Component<NoteListProps, NoteListSta
                 { onPress: () => this.onDeleteItem(item), text: 'Delete', type: 'delete' }
             ] as SwipeoutButtonProperties[],
             rowId: index,
-            sectionId: 1
+            sectionId: 1,
+            style: { backgroundColor: 'white' }
         } as SwipeoutProperties;
 
         return (
@@ -152,7 +153,8 @@ export default class NoteList extends React.Component<NoteListProps, NoteListSta
             data: this.props.items,
             extraData: this.state.activeRow,
             keyExtractor: (item, index) => item.noteId,
-            renderItem: ({ item, index }) => this.renderItem(item, index)
+            renderItem: ({ item, index }) => this.renderItem(item, index),
+            style: { backgroundColor: 'white' }
         } as FlatListProperties<Note>;
 
         return (<FlatList {...listSettings}/>);

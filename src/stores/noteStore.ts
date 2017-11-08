@@ -4,6 +4,7 @@ import uuid from 'uuid';
 
 export class NoteStore {
     @observable notes: Note[] = [];
+    @observable activeNoteId: string|null = null;
 
     saveNote(note: Note) {
         console.log(`NoteStore:saveNote(${note.noteId})`);
@@ -22,17 +23,30 @@ export class NoteStore {
             throw new Error(`Note ${note.noteId} not found`);
         } else {
             this.notes.splice(idx, 1);
+            if (note.noteId === this.activeNoteId) {
+                this.activeNoteId = null;
+            }
         }
     }
 
-    getNote(noteId: string): Note {
-        console.log(`NoteStore.getNote(${noteId})`);
-        const idx = this.notes.findIndex((n) => n.noteId === noteId);
+    getNote(): Note {
+        console.log(`NoteStore.getNote()`);
+        const idx = this.notes.findIndex((n) => n.noteId === this.activeNoteId);
         if (idx < 0) {
-            throw new Error(`Note ${noteId} not found`);
+            return null;
         } else {
             return this.notes[idx];
         }
+    }
+
+    setActiveNote(note: Note) {
+        console.log(`NoteStore.setActiveNote(${note.noteId})`);
+        this.activeNoteId = note.noteId;
+    }
+
+    clearActiveNote() {
+        console.log(`NoteStore.clearActiveNote()`);
+        this.activeNoteId = null;
     }
 }
 
